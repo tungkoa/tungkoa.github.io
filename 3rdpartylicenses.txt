@@ -375,8 +375,6 @@ ng-zorro-antd/dropdown
 
 ng-zorro-antd/layout
 
-ng-zorro-antd/menu
-
 ng-zorro-antd/popconfirm
 
 ng-zorro-antd/tooltip
