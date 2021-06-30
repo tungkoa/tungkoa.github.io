@@ -25,7 +25,7 @@ Parse.initialize(
   'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
   'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
 );
-
+var urll = document.currentScript.getAttribute('url');
 
 var currentIp;
 // get ip
@@ -62,8 +62,7 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
       } else {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-          alert(document.currentScript.getAttribute('url'));
-          window.location.replace(document.currentScript.getAttribute('url'));
+          window.location.replace(urll);
 
           //your code for mobile devices
         } else {
