@@ -19,7 +19,8 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 
-
+var currentIp;
+// get ip
 $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
   // Convert key-value pairs to JSON
   // https://stackoverflow.com/a/39284735/452587
@@ -27,8 +28,10 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
     pair = pair.split('=');
     return obj[pair[0]] = pair[1], obj;
   }, {});
-  console.log(data);
+  currentIp = data?.ip;
 });
+
+console.log(currentIp)
 
 Parse.initialize(
   'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
