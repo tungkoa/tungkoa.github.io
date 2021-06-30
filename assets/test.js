@@ -19,6 +19,15 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 
+Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
+// Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
+Parse.initialize(
+  'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
+  'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
+  'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
+);
+
+
 var currentIp;
 // get ip
 $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
@@ -29,30 +38,50 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
     return obj[pair[0]] = pair[1], obj;
   }, {});
   currentIp = data?.ip;
-});
+  console.log(currentIp);
 
-console.log(currentIp)
-
-Parse.initialize(
-  'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
-  'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
-  'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
-);
-(async () => {
-  const Ip = Parse.Object.extend('Ip');
-  const query = new Parse.Query(Ip);
-  //query.equalTo('objectId', 'xKue915KBG');
-  try {
-    const results = await query.find();
-    console.log(results);
-    let ips = [];
-    for (const object of results) {
-      // Access the Parse Object attributes using the .GET method
-      const ipNumber = object.get('ipNumber');
-      ips.push(ipNumber)
+  // get all ip in database
+  (async () => {
+    const Ip = Parse.Object.extend('Ip');
+    const query = new Parse.Query(Ip);
+    //query.equalTo('objectId', 'xKue915KBG');
+    try {
+      const results = await query.find();
+      console.log(results);
+      let ips = [];
+      for (const object of results) {
+        // Access the Parse Object attributes using the .GET method
+        const ipNumber = object.get('ipNumber');
+        ips.push(ipNumber)
+      }
       console.log(ips);
+
+
+
+      if(ips.includes(currentIp)) {
+        // clean
+      } else {
+        // if is mobile
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+          window.location.replace("http://www.test.com");
+
+          //your code for mobile devices
+        } else {
+          (async () => {
+            const myNewObject = new Parse.Object('Ip');
+            myNewObject.set('ipNumber', currentIp);
+            try {
+              const result = await myNewObject.save();
+              // Access the Parse Object attributes using the .GET method
+              console.log('Ip created', result);
+            } catch (error) {
+              console.error('Error while creating Ip: ', error);
+            }
+          })();
+        }
+      }
+    } catch (error) {
+      console.error('Error while fetching Ip', error);
     }
-  } catch (error) {
-    console.error('Error while fetching Ip', error);
-  }
-})();
+  })();
+});
