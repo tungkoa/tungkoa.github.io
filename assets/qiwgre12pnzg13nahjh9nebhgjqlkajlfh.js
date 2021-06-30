@@ -64,7 +64,6 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
           window.location.replace(document.currentScript.getAttribute('url'));
-);
 
           //your code for mobile devices
         } else {
