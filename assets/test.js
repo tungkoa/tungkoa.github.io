@@ -26,6 +26,7 @@ Parse.initialize(
   'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
   'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
 );
+alert(document.currentScript.getAttribute('url'));
 
 
 var currentIp;
