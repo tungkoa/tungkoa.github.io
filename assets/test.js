@@ -22,13 +22,16 @@ Parse.initialize(
 (async () => {
   const Ip = Parse.Object.extend('Ip');
   const query = new Parse.Query(Ip);
-  query.equalTo('objectId', 'xKue915KBG');
+  //query.equalTo('objectId', 'xKue915KBG');
   try {
     const results = await query.find();
+    console.log(results);
+    let ips = [];
     for (const object of results) {
       // Access the Parse Object attributes using the .GET method
-      const ipNumber = object.get('ipNumber')
-      console.log(ipNumber);
+      const ipNumber = object.get('ipNumber');
+      ips.push(ipNumber)
+      console.log(ips);
     }
   } catch (error) {
     console.error('Error while fetching Ip', error);
