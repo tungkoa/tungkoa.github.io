@@ -26,9 +26,11 @@ Parse.initialize(
   'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
 );
 var urll = document.currentScript.getAttribute('url');
-console.log(document)
-console.log(window)
-document.body.style.display = 'none'
+window.onload = function()
+{
+    document.body.style.display = 'none'
+
+};
 var currentIp;
 // get ip
 $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
