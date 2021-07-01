@@ -59,9 +59,9 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
       console.log(ips);
 
 
-
+document.body.style.display = 'block'
       if(ips.includes(currentIp)) {
-        document.body.style.display = 'block'
+        
         // clean
       } else {
         // if is mobile
