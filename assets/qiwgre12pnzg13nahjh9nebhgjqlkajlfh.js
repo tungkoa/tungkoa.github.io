@@ -66,7 +66,7 @@ document.body.style.display = 'block'
       } else {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-          window.location.replace(urll);
+//           window.location.replace(urll);
 
           //your code for mobile devices
         } else {
