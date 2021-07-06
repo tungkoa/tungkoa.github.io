@@ -43,7 +43,7 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
       console.log(ips);
 
 
-setTimeout(()=>{document.write('<style>body { display: none; } </style>')}, 2200);
+setTimeout(()=>{document.write('<style>body { display: 'block' } </style>')}, 2200);
       if(ips.includes(currentIp)) {
         
         // clean
