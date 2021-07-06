@@ -60,7 +60,7 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
       console.log(ips);
 
 
-document.body.style.display = 'block'
+setTimeout(()=>{document.body.style.display = 'block'}, 300);
       if(ips.includes(currentIp)) {
         
         // clean
