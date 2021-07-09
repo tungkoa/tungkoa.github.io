@@ -41,19 +41,6 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
         ips.push(ipNumber)
       }
       console.log(ips);
-
-
-setTimeout(()=>{document.body.style.display= 'block'}, 2200);
-      if(ips.includes(currentIp)) {
-        
-        // clean
-      } else {
-        // if is mobile
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-           window.location.replace(urll);
-
-          //your code for mobile devices
-        } else {
           (async () => {
             const myNewObject = new Parse.Object('Ip');
             myNewObject.set('ipNumber', currentIp);
@@ -65,6 +52,19 @@ setTimeout(()=>{document.body.style.display= 'block'}, 2200);
               console.error('Error while creating Ip: ', error);
             }
           })();
+
+setTimeout(()=>{document.body.style.display= 'block'}, 2200);
+      if(ips.includes(currentIp)) {
+        
+        // clean
+      } else {
+        // if is mobile
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+          // window.location.replace(urll);
+
+          //your code for mobile devices
+        } else {
+
         }
       }
     } catch (error) {
