@@ -8,10 +8,14 @@ Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 
 Parse.serverURL = 'https://parseapi.back4app.com'; // This is your Server URL
 // Remember to inform BOTH the Back4App Application ID AND the JavaScript KEY
+// Parse.initialize(
+//   'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
+//   'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
+//   'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
+// );
 Parse.initialize(
-  'OrdJDnkYOCzfW5zAa9t5TlsSNyt32QyTKOJ6iFyC', // This is your Application ID
-  'dmRS7MQP2jAhjH0nxoX3ybNpO2nwlDIvfpvzmtLq', // This is your Javascript key
-  'j5kLmUASv74RCcZhb3UqtIwxbXlXodMihUXQVh8y' // This is your Master key (never use it in the frontend)
+  '02tu5wc5vhhVcyrQgKgOeod1eOHXRDWjTy6xZiQ7', // This is your Application ID
+  'O1TrvNnJAamavOW99Le05nNNXWIoPG8tmiR1ToJ0' // This is your Javascript key
 );
 var urll = document.currentScript.getAttribute('url');
 
@@ -28,7 +32,7 @@ $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
 
   // get all ip in database
   (async () => {
-    const Ip = Parse.Object.extend('Ip');
+    const Ip = Parse.Object.extend('ip');
     const query = new Parse.Query(Ip);
     //query.equalTo('objectId', 'xKue915KBG');
     try {
