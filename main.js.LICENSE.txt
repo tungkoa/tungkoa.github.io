@@ -1,5 +1,7 @@
 /*! drag-react - v1.1.1 | Copyright 2022 - Haikel Fazzani */
 
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
+
 /**
  * @license
  * Copyright 2017 Google LLC
