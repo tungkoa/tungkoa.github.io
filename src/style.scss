@@ -1,4 +1,6 @@
+
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -21,4 +23,39 @@ body {
 .my-masonry-grid_column > div {
   /* change div to reference your elements you put in <Masonry> */
   margin-bottom: 30px;
+}
+
+.textareaNote {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.54);
+  resize: none;
+}
+
+.floatRight {
+  float: right;
+}
+
+.btnUpdateNote {
+  display: flex;
+  justify-content: end;
+  margin-top: 15px;
+}
+
+.btnAction {
+  display: flex;
+  justify-content: right;
+  margin-bottom: 45px;
+}
+
+.w-300 {
+  width: 300px;
+}
+
+.interview {
+}
+
+code {
+  font-family: monospace, Helvetica !important;
 }

@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const Dotenv = require("dotenv-webpack")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const {CleanWebpackPlugin} = require("clean-webpack-plugin")
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = async (env, agrv) => {
   console.log(agrv);
@@ -12,11 +13,14 @@ module.exports = async (env, agrv) => {
   const basePlugins = [
     new Dotenv(),
     new HtmlWebpackPlugin({
-      template: "src/index.html"
+      template: "src/index.html",
+      favicon: "./src/assets/images/t.jpeg"
     }),
-    // new CopyPlugin({
-    //     patterns: copyPluginPatterns
-    // }),
+    new CopyPlugin({
+      patterns: [
+        {from: "templates", to: ""},
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: "[name].css"
     }),
@@ -104,7 +108,7 @@ module.exports = async (env, agrv) => {
     },
     devtool: isDev ? "source-map" : false,
     devServer: {
-      port: 3000,
+      port: 3003,
       hot: true,
       historyApiFallback: true,
       open: true

@@ -1,13 +1,17 @@
 import React, { useContext, useEffect, useState } from "react";
 import globalStyles from "../style.module.scss"
 import { StoreContext } from "./components/StoreProvider";
-import { createMuiTheme, ThemeProvider } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core';
 import { purple } from '@material-ui/core/colors';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Notes from './pages/Notes';
-import Create from './pages/Create';
+import Notes from './pages/note/Notes';
+import Create from './pages/note/Create';
 import Layout from './components/Layout';
-const theme = createMuiTheme({
+import { Backdrop, TextField } from '@mui/material';
+import Interview from './pages/interview/Interview';
+import Home from './pages/home/Home';
+
+const theme = createTheme({
   palette: {
     primary: {
       main: "#fafafa"
@@ -24,27 +28,54 @@ const theme = createMuiTheme({
 });
 
 function App(props) {
-  const [trialMindBodyFormData, setTrialMindBodyFormData] = useContext(StoreContext).trialMindBodyFormData;
   const [isLoading, setIsLoading] = useContext(StoreContext).isLoading;
-  const [studioData, setStudioData] = useContext(StoreContext).studioData;
   const [isOpen, setIsOpen] = useState(true);
+  const [password, setPassword] = useState('');
   useEffect(() => {
   }, []);
 
+  function handleOnChangePassword(e) {
+    setPassword(e.target.value);
+    if(e.target.value === ',') {
+      setIsOpen(false)
+    }
+  }
 
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Layout>
-          <Switch>
-            <Route exact path="/">
-              <Notes />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-          </Switch>
-        </Layout>
+        <Route exact path='/home'>
+          <Home/>
+        </Route>
+        <Route path='/interview'>
+          <Interview/>
+        </Route>
+        <Route path="/note">
+          <Backdrop
+            sx={{color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1}}
+            open={isOpen}
+            // onClick={handleClose}
+          >
+            <TextField
+              autoFocus={true}
+              id="outlined-password-input"
+              type="password"
+              autoComplete="current-password"
+              onChange={handleOnChangePassword}
+            />
+            {/*<CircularProgress color="inherit" />*/}
+          </Backdrop>
+          {!isOpen && <Layout>
+            <Switch>
+              <Route exact path="/note">
+                <Notes/>
+              </Route>
+              <Route path="/note/create">
+                <Create/>
+              </Route>
+            </Switch>
+          </Layout>}
+        </Route>
       </Router>
     </ThemeProvider>
   );

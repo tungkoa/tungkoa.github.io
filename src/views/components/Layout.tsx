@@ -57,12 +57,12 @@ export default function Layout({ children }) {
     {
       text: "My Notes",
       icon: <SubjectOutlined color="secondary" />,
-      path: "/"
+      path: "/note"
     },
     {
       text: "Create Notes",
       icon: <AddCircleOutlineOutlined color="secondary" />,
-      path: "/create"
+      path: "/note/create"
     }
   ];
 
@@ -74,7 +74,7 @@ export default function Layout({ children }) {
             Today is the:
             {format(new Date(), " do MMMM Y")}
           </Typography>
-          <Typography>Kendi</Typography>
+          <Typography>Tungkoa</Typography>
           <Avatar className={classes.avatar} />
         </Toolbar>
       </AppBar>

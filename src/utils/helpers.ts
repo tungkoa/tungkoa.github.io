@@ -1,5 +1,3 @@
-import { MONTH_NAMES } from "./constants/selectOptions";
-
 export const innerHtml = (content) => {
   return { __html: content };
 };
@@ -57,7 +55,3 @@ export const handlerErrorByCode = (error, error_code, cb) => {
   }
 };
 
-export const getMonthFromString = (mon) => {
-  const month = (MONTH_NAMES.indexOf(mon) + 1).toString();
-  return month.length === 1 ? `0${month}` : month;
-}
