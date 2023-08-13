@@ -1,1 +1,389 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Tungkoa</title><link rel="icon" href="/t.jpeg"><script defer="defer" src="/main.js"></script><link href="/main.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <script type="module" crossorigin src="/assets/main-c27e35dd.js"></script>
+    <link rel="stylesheet" href="/assets/main-75629b53.css">
+  </head>
+  <body class="overflow-x-hidden" id="page-main">
+    <header class="header header--transparent">
+      <div class="header__inner">
+        <div class="header__left">
+          <div class="header__logo"></div>
+          <span>TP Entertainment</span>
+        </div>
+
+        <div class="flex">
+          <div class="header__language">
+            <span class="active">VN</span>
+            <span>EN</span>
+          </div>
+
+          <div class="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="nav-menu" id="overlay">
+      <nav>
+        <ul>
+          <li><a href="#">VỀ CHÚNG TÔI</a></li>
+          <li><a href="#">TUYỂN DỤNG</a></li>
+          <li><a href="#">TIN TỨC</a></li>
+          <li><a href="#">LIÊN HỆ</a></li>
+        </ul>
+      </nav>
+      <div></div>
+    </div>
+    <div class="banner-wrapper">
+      <div class="main-banner">
+        <div class="main-banner__img"></div>
+        <video autoplay muted loop>
+          <source src="/sample.mp4" type="video/mp4" />
+        </video>
+        <img src="/scroll-down.svg" alt="" />
+      </div>
+
+      <div class="intro">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1000"
+          class="container"
+        >
+          <p class="intro__sub-title">CHÚNG TÔI LÀ TP ENTERTAINMENT</p>
+          <p class="intro__title">
+            TP Entertainment là công ty chuyên phát triển sản phẩm công nghệ
+            trên nền smartphone: Mobile Games và Mobile Apps.
+          </p>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="1500"
+          class="intro__vision intro__vision-first"
+        >
+          <div class="container"><span>SỨ MỆNH</span></div>
+          <div class="container">
+            <span>SỨ MỆNH</span>
+            <span class="intro__vision-detail"
+              >Luôn lắng nghe, thấu hiểu nhằm thỏa mãn nhu cầu giải trí và tăng
+              trải nghiệm người dùng smartphone trên toàn thế giới.</span
+            >
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="2000"
+          class="intro__vision"
+        >
+          <div class="container"><span>TẦM NHÌN</span></div>
+          <div class="container">
+            <span>TẦM NHÌN</span>
+            <span class="intro__vision-detail"
+              >Trở thành nhà sản xuất mobile game và mobile app hàng đầu Việt
+              Nam, có uy tín trên bản đồ khu vực và thế giới.</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="development-path">
+      <div class="swiper-wrapper">
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android
+            </div>
+            <div class="development-path__year">2013</div>
+          </div>
+        </div>
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android
+            </div>
+            <div class="development-path__year">2014</div>
+          </div>
+        </div>
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android
+            </div>
+            <div class="development-path__year">2015</div>
+          </div>
+        </div>
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android
+            </div>
+            <div class="development-path__year">2016</div>
+          </div>
+        </div>
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android
+            </div>
+            <div class="development-path__year">2017</div>
+          </div>
+        </div>
+        <div class="development-path__panel swiper-slide">
+          <div class="container development-path__content">
+            <div class="development-path__title">
+              TP Tech ra đời với 3 thành viên, phát triển ứng dụng trên nền tảng
+              Android<br />
+              Mở văn phòng cơ sở 2 với tên gọi "văn phòng Ahaa" tại Đại Mỗ, Nam
+              Từ Liêm
+            </div>
+            <div class="development-path__year">2018</div>
+          </div>
+        </div>
+      </div>
+      <!--      <div class="swiper-button-next"></div>-->
+      <!--      <div class="swiper-button-prev"></div>-->
+      <div class="development-path__control">
+        <div class="container">CHẶNG ĐƯỜNG PHÁT TRIỂN</div>
+        <div class="development-path__arrows">
+          <img
+            src="/arrow-left-thin.svg"
+            alt=""
+            id="development-path-prev"
+            class="swiper-button-next1"
+          />
+          <img
+            src="/arrow-right-thin.svg"
+            alt=""
+            id="development-path-next"
+            class="swiper-button-prev1"
+          />
+        </div>
+      </div>
+    </div>
+
+    <section class="container quality swiper">
+      <p class="quality__sub-title">GIÁ TRỊ CỐT LÕI</p>
+      <p class="quality__title">Những tôn chỉ chúng tôi theo đuổi</p>
+      <div class="quality__content swiper-wrapper">
+        <div class="quality__item swiper-slide">
+          <p class="quality__item-fix">HIỆU QUẢ</p>
+          <div class="quality__item-fade">
+            <p>HIỆU QUẢ</p>
+            <div class="quality__item-sub-text">
+              Bám sát mục tiêu, nhất quán và tối ưu mọi nguồn lực trong công
+              việc
+            </div>
+          </div>
+        </div>
+        <div class="quality__item swiper-slide">
+          <p class="quality__item-fix">SÁNG TẠO</p>
+          <div class="quality__item-fade">
+            <p>SÁNG TẠO</p>
+            <div class="quality__item-sub-text">
+              Luôn đổi mới từ những việc nhỏ, luôn thay đổi để thích nghi với sự
+              thay đổi của thị trường và luôn tìm ra phương pháp mới để giải
+              quyết vấn đề
+            </div>
+          </div>
+        </div>
+        <div class="quality__item swiper-slide">
+          <p class="quality__item-fix">
+            <span>LẤY</span> KHÁCH HÀNG<br />
+            <span>LÀM</span> TRUNG TÂM
+          </p>
+          <div class="quality__item-fade">
+            <p>
+              <span>LẤY</span> KHÁCH HÀNG<br />
+              <span>LÀM</span> TRUNG TÂM
+            </p>
+            <div class="quality__item-sub-text">
+              Mọi suy nghĩ, hành động, công việc đều xoay quanh và hướng đến
+              việc mang lại giá trị cũng như trải nghiệm tốt cho khách hàng
+            </div>
+          </div>
+        </div>
+        <div class="quality__item swiper-slide">
+          <p class="quality__item-fix">NHÂN VĂN</p>
+          <div class="quality__item-fade">
+            <p>NHÂN VĂN</p>
+            <div class="quality__item-sub-text">
+              Làm công việc tử tế, đối xử với nhau tử tế và biết ơn
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container life">
+      <div class="life__left">
+        <div class="life-pc">
+          <p class="life__sub-title">CUỘC SỐNG TẠI TP</p>
+          <p class="life__title">
+            Trở thành một phần của đại gia đình TP Entertainment
+          </p>
+        </div>
+        <p class="life__text">
+          Thời gian làm việc 7,5 giờ/ngày.<br />
+          Khám sức khỏe định kỳ hàng năm.<br />
+          Chế độ bảo hiểm theo quy định nhà nước.<br />
+          Khu vực pantry rộng rãi phục vụ ăn uống, teabreak 30 phút mỗi ngày.<br />
+          Khu vực giải trí phục vụ đa dạng sở thích từ PS5, bàn bi lắc, khu vực
+          đá cầu và tủ sách.<br />
+          Du lịch hàng năm, dã ngoại hàng quý cùng người thân.<br />
+        </p>
+        <div class="life__btn">
+          <div class="btn-primary btn-primary--black">
+            <span>Các vị trí đang tuyển</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="life__right">
+        <div class="life-sp">
+          <p class="life__sub-title">CUỘC SỐNG TẠI TP</p>
+          <p class="life__title">
+            Trở thành một phần của đại gia đình TP Entertainment
+          </p>
+        </div>
+        <div class="life__imgs">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+            class="life__img life__img-1"
+          ></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+            class="life__img life__img-2"
+          ></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="1500"
+            class="life__img life__img-3"
+          ></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="2000"
+            class="life__img life__img-4"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sponsor">
+      <div class="container">
+        <p class="sponsor__sub-title">KHÁCH HÀNG VÀ ĐỐI TÁC</p>
+        <p class="sponsor__title">
+          Chúng tôi phục vụ hơn 100 triệu người dùng toàn cầu và là đối tác của
+        </p>
+        <div class="sponsor__list">
+          <img src="/google.svg" alt="" />
+          <img src="/google.svg" alt="" />
+          <img src="/google.svg" alt="" />
+          <img src="/google.svg" alt="" />
+          <img src="/google.svg" alt="" />
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="flex items-center text-2xl">
+        <div class="footer__logo"></div>
+        <span class="font-bold sm:text-xl">TP Entertainment</span>
+      </div>
+      <div class="footer__inner">
+        <div class="footer__left">
+          <p class="uppercase">Liên hệ</p>
+          <p class="font-bold text-2xl mt-6 uppercase sm:text-xl">
+            Công ty TNHH Dịch vụ Công nghệ TP
+          </p>
+          <div class="footer__location">
+            <strong class="">Trụ sở chính:</strong>
+            <p class="">
+              Tầng 2 tháp A, Toà nhà Rivera Park, 69 Vũ Trọng Phụng, Phường
+              Thanh Xuân Trung, Quận Thanh Xuân, Thành phố Hà Nội
+            </p>
+          </div>
+
+          <p class="mt-6"><strong>Hotline</strong>: +8424 6682 6968</p>
+          <p class="mt-6"><strong>Email</strong>: contact@tp.com.vn</p>
+        </div>
+        <div class="footer__right">
+          <div class="flex-1">
+            <p class="">CÔNG TY</p>
+            <a href="#" class="font-bold block mt-6">Về chúng tôi</a>
+            <a href="#" class="font-bold block mt-5">Tuyển dụng</a>
+            <a href="#" class="font-bold block mt-5">Tin tức</a>
+            <a href="#" class="font-bold block mt-5">Liên hệ</a>
+          </div>
+          <div class="flex-1">
+            <p class="">LIÊN KẾT</p>
+            <div class="flex mt-3">
+              <a href="">
+                <img
+                  src="/facebook.svg"
+                  alt=""
+                  width="36"
+                  height="36"
+                  class="mr-4 sm:mr-5"
+                />
+              </a>
+              <a href="">
+                <img
+                  src="/youtube.svg"
+                  alt=""
+                  width="36"
+                  height="36"
+                  class="mr-4 sm:mr-5"
+                />
+              </a>
+              <a href="">
+                <img src="/linkedin.svg" alt="" width="36" height="36" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
