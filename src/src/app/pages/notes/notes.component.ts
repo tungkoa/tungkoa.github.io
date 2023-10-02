@@ -1,22 +1,29 @@
 import { Component, inject, OnInit } from '@angular/core';
-import {CdkDrag} from '@angular/cdk/drag-drop';
-import { AsyncPipe } from '@angular/common';
+import { CdkDrag } from '@angular/cdk/drag-drop';
+import { AsyncPipe, NgForOf } from '@angular/common';
 import { FirebaseService } from '../../services/firebase.service';
-import { Firestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+
+interface Note {
+  title?: string;
+  content?: string;
+}
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
   standalone: true,
-  imports: [CdkDrag, AsyncPipe],
+  imports: [CdkDrag, AsyncPipe, NgForOf, MatGridListModule, MatCardModule],
 })
-export class NotesComponent implements OnInit{
+export class NotesComponent implements OnInit {
   firebase: FirebaseService = inject(FirebaseService);
+  notes$: Observable<Note[]> = this.firebase.getNotes();
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
-    this.firebase.get()
+    // this.notes$ = this.firebase.getNotes()
   }
 }

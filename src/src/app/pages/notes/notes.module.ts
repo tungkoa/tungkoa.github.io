@@ -5,10 +5,6 @@ import { NotesRoutingModule } from './notes-routing.module';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    NotesRoutingModule,
-  ]
+  imports: [CommonModule, NotesRoutingModule],
 })
-export class NotesModule {
-}
+export class NotesModule {}

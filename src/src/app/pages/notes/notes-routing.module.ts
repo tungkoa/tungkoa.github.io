@@ -4,12 +4,13 @@ import { NotesComponent } from './notes.component';
 
 const routes: Routes = [
   {
-    path: '', component: NotesComponent
-  }
+    path: '',
+    component: NotesComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class NotesRoutingModule { }
+export class NotesRoutingModule {}
