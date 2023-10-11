@@ -17,4 +17,6 @@ export class FirebaseService {
     const notesCollection = collection(this.firestore, 'notes');
     return collectionData(notesCollection);
   }
+
+  addNote() {}
 }

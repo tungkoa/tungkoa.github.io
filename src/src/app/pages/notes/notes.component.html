@@ -1,77 +1,68 @@
-<!--<div class="example-boundary">-->
-<!--  <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>-->
-<!--    I can only be dragged within the dotted container-->
-<!--  </div>-->
-<!--  <ng-container *ngFor="let note of notes$ | async">-->
-<!--    <div>-->
-<!--      {{note.title}}-->
-<!--    </div>-->
-<!--  </ng-container>-->
-<!--</div>-->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Notes</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with add icon"
+      (click)="handleAddNote()"
+    >
+      <mat-icon>add</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>asdfkjbasdbf</mat-card-title>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Option 1</button>
+      <button mat-menu-item>Option 2</button>
+      <button mat-menu-item>Option 3</button>
+    </mat-menu>
+  </mat-card-header>
+  <mat-card-content>
+    <!-- Your card content goes here -->
+  </mat-card-content>
+</mat-card>
 <div style="padding: 30px">
   <mat-grid-list [cols]="3" gutterSize="16px">
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title><p>Shiba Inu</p></mat-card-title>
-          <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz
-            breeds of dog from Japan. A small, agile dog that copes very well
-            with mountainous terrain, the Shiba Inu was originally bred for
-            hunting.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title><p>Shiba Inu</p></mat-card-title>
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz
-            breeds of dog from Japan. A small, agile dog that copes very well
-            with mountainous terrain, the Shiba Inu was originally bred for
-            hunting.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title><p>Shiba Inu</p></mat-card-title>
-          <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz
-            breeds of dog from Japan. A small, agile dog that copes very well
-            with mountainous terrain, the Shiba Inu was originally bred for
-            hunting.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <mat-card-title><p>Shiba Inu</p></mat-card-title>
-          <!--      <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
-        </mat-card-header>
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz
-            breeds of dog from Japan. A small, agile dog that copes very well
-            with mountainous terrain, the Shiba Inu was originally bred for
-            hunting.
-          </p>
-        </mat-card-content>
-      </mat-card>
-    </mat-grid-tile>
+    <ng-container *ngFor="let note of notes">
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title
+              ><p>{{ note.title }}</p></mat-card-title
+            >
+            <button
+              mat-icon-button
+              [matMenuTriggerFor]="menu"
+              aria-label="Example icon-button with a menu"
+            >
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>dialpad</mat-icon>
+                <span>Redial</span>
+              </button>
+              <button mat-menu-item disabled>
+                <mat-icon>voicemail</mat-icon>
+                <span>Check voice mail</span>
+              </button>
+              <button mat-menu-item>
+                <mat-icon>notifications_off</mat-icon>
+                <span>Disable alerts</span>
+              </button>
+            </mat-menu>
+          </mat-card-header>
+          <mat-card-content style="padding: 16px" [innerHTML]="note.content">
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </ng-container>
   </mat-grid-list>
 </div>
