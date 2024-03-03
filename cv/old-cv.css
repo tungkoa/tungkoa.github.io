@@ -559,7 +559,6 @@ a#pdf:hover {
 .job.job__first {
   position: relative;
   margin-top: 40px;
-  margin-bottom: unset;
 }
 
 .job .company {
@@ -577,12 +576,6 @@ a#pdf:hover {
 
 .job p {
   margin: 0.5em 0 0 0;
-}
-
-.job br {
-  display: block;
-  margin: 5px;
-  content: '';
 }
 
 .last {
