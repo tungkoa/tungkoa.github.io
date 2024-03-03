@@ -490,7 +490,7 @@ h1, h2, h3, h4 {
 }
 
 p {
-  font-size: 110%;
+  font-size: 130%;
   line-height: 20px;
 }
 
@@ -512,7 +512,7 @@ li {
 }
 
 p.enlarge {
-  font-size: 144%;
+  /* font-size: 144%; */
   line-height: 24px;
 }
 
