@@ -2157,7 +2157,7 @@ textarea.w-input, textarea.w-select {
 .container.cell.growin {
   background-color: rgba(255, 255, 255, 0);
   border-style: none;
-  padding: 20px 12px 12px;
+  padding: 20px 0;
   display: block;
 }
 
@@ -3472,14 +3472,44 @@ textarea.w-input, textarea.w-select {
   max-width: 1024px;
 }
 
-.new-faq {
-  display: flex !important;
-  flex-direction: row !important;
+@media screen and (min-width: 991px) {
+  .new-faq {
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .new-faq .mvp {
+    width: 200% !important;
+  }
+
+  .ozze-col {
+    display: flex !important;
+    gap: 20px;
+    margin-top: 0;
+  }
+
+  .ozze-title {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 72px;
+
+    }
+  }
 }
 
-.new-faq .mvp {
-  width: 200% !important;
+.ozze-col {
+  display: block;
+  gap: 20px;
+  img {
+    width: 100%;
+    margin-top: 20px;
+  }
 }
+
+
 
 .heading {
   color: #000;
