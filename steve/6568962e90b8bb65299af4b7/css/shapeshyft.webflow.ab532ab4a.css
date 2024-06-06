@@ -3472,6 +3472,10 @@ textarea.w-input, textarea.w-select {
   max-width: 1024px;
 }
 
+.lkUPZx {
+  display: none;
+}
+
 @media screen and (min-width: 991px) {
   .new-faq {
     display: flex !important;
@@ -3503,10 +3507,13 @@ textarea.w-input, textarea.w-select {
 .ozze-col {
   display: block;
   gap: 20px;
-  img {
-    width: 100%;
-    margin-top: 20px;
-  }
+}
+
+.ozze-col img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 25px;
+  margin-bottom: 20px;
 }
 
 
